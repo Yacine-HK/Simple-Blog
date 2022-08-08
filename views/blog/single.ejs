@@ -1,0 +1,19 @@
+<section>
+  <h1><%= singleBlog.title %></h1>
+  <h3><%= singleBlog.author %></h3>
+  <p><%= singleBlog.body %></p>
+  <% const blog = singleBlog %>
+  <p>
+    date: <%= date.getDate(blog) + ' / ' + date.getMonth(blog) + ' / ' +
+    date.getYear(blog) %> <%= 'at ' + date.getHours(blog) + ' : ' +
+    date.getMinutes(blog) + ' : ' + date.getSeconds(blog)%>
+  </p>
+</section>
+
+<button>
+  <a class="delete" data-doc="<%= singleBlog._id %>"> delete </a>
+</button>
+<button><a href="edit/<%= singleBlog.id %>"> edit </a></button>
+<button><a href="/">Cancel</a></button>
+
+<script src="/singleBlog.js"></script>

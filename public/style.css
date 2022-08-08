@@ -1,0 +1,115 @@
+body {
+  background-color: aliceblue;
+}
+
+.all button {
+  display: none;
+}
+
+.submit {
+  display: none;
+}
+
+form {
+  margin-top: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+#title,
+#author,
+#body {
+  margin-bottom: 1.5rem;
+}
+
+/* --------------------------------------- */
+.card {
+  font-size: 18px;
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.card .container {
+  position: relative;
+  width: 450px;
+  height: 420px;
+  padding: 15px;
+  border: 1px solid;
+  border-radius: 5px;
+  background-color: white;
+}
+.container h1 {
+  margin-top: 30px;
+  text-align: center;
+}
+.container label {
+  margin-left: 2rem;
+}
+.container form input,
+.container form textarea {
+  margin-left: 3rem;
+  padding: 5px;
+  width: 230px;
+  text-align: left;
+}
+.container form textarea:focus {
+  text-align: left;
+}
+
+.card .container button {
+  position: absolute;
+  bottom: 10px;
+  padding: 15px 32px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+.submit-btn,
+.edit-btn {
+  position: absolute;
+  left: 20px;
+  background-color: #4caf50;
+}
+.cancel-btn {
+  position: absolute;
+  right: 220px;
+  background-color: #ec565e;
+}
+
+.submit-btn,
+.edit-btn,
+.cancel-btn {
+  text-decoration: none;
+  color: white;
+}
+.card .container .submit-btn:hover {
+  background-color: white;
+  border: 0.1px solid #4caf50;
+  color: black;
+}
+
+.card .container .cancel-btn:hover {
+  background-color: white;
+  border: 0.1px solid #d92d36;
+  color: black;
+}
+/* .card .container .cancel-btn:hover a {
+} */
+
+.card .container .edit-btn:hover {
+  background-color: white;
+  border: 0.1px solid #4caf50;
+}
+.card .container .edit-btn:hover a {
+  color: black;
+}

@@ -1,0 +1,44 @@
+<h1><a href="/">Welcome</a></h1>
+<button class="dummy">add dumy data</button>
+<button><a href="/blogs/create"> Create new blog</a></button>
+
+<section>
+  <% if(blogs.length> 0){ %>
+
+  <form action="/blogs/blog">
+    <label for="bsearch">Search For Blogs</label>
+    <input type="search" id="bsearch" name="bsearch" />
+    <input type="submit" />
+  </form>
+
+  <h2 class="delete"><button>Delete Blogs</button></h2>
+  <h3 class="all"><button>Select All Blogs</button></h3>
+  <h2>Blogs:</h2>
+
+  <form>
+    <% blogs.forEach((blog)=> { %>
+    <input type="hidden" id="<%= blog.title%>" name="<%= blog.title%>" />
+
+    <label for="<%= blog.title%>">
+      <a href="/blogs/<%= blog._id %>"><%= blog.title %> </a></label
+    ><br />
+
+    <% if(blog.edited){%>
+    <span>(edited)</span>
+    <%} %>
+
+    <p>
+      date: <%= date.getDate(blog) + ' / ' + date.getMonth(blog) + ' / ' +
+      date.getYear(blog) %>
+    </p>
+    <hr />
+    <%})%>
+  </form>
+  <button class="submit">submit</button>
+  <% } else {%>
+  <p>No blogs</p>
+  <%}%>
+</section>
+
+<script src="/deleteBlogs.js"></script>
+<script src="/dummyData.js"></script>

@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="container">
+    <h1>Creat new blog</h1>
+    <form method="POST">
+      <% const singleBlog = {} %> 
+      <%- include('./_form.ejs',{singleBlog}) %>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+    <button class="cancel-btn">Cancel</button>
+  </div>
+</div>
+
+<script src="/cancel.js"></script>

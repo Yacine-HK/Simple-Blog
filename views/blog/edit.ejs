@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="container">
+    <h1>Edit blog</h1>
+    <form method="GET">
+      <%- include('./_form.ejs') %>
+      <button class="edit-btn">
+        <a data-doc="<%= singleBlog._id %>">Edit</a>
+      </button>
+    </form>
+    <button class="cancel-btn">Cancel</button>
+  </div>
+</div>
+
+<script src="/cancel.js" defer></script>
+<script src="/editBlog.js"></script>

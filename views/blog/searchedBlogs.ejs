@@ -1,0 +1,15 @@
+<form>
+    <% blogs.forEach((blog)=> { %>
+    <input type="hidden" id="<%= blog.title%>" name="<%= blog.title%>" />
+
+    <label for="<%= blog.title%>">
+      <a href="/blogs/<%= blog._id %>"><%= blog.title %> </a></label
+    ><br />
+
+    <% if(blog.edited){%>
+    <span>(edited)</span>
+    <%} %>
+
+    <hr />
+    <%})%>
+  </form>
